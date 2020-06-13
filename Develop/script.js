@@ -103,6 +103,15 @@ var numbers = [
   "8",
   "9"
 ];
+function getRandomLower() {
+ return lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)];
+}
+console.log(getRandomLower());
+
+function getRandomUpper() {
+  return upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)];
+}
+console.log(getRandomUpper());
 var passwordOptions = function () {
   //selecting length, parseInt to have input change to integer
     var passLength = parseInt (
@@ -122,6 +131,11 @@ var passwordOptions = function () {
     var confirmSpecialChar = confirm( 
       "Would you like your password to have special characters?"
     );
+      if(confirmSpecialChar === true) {
+
+      } else {
+        
+      }
     //Confirmation for lowercase
     var confirmLowerCase = confirm (
       "Would you like your password to have lower case letters?"
@@ -134,11 +148,11 @@ var passwordOptions = function () {
     var confirmNum = confirm (
       "Would you like your password to have numbers?"
     );
-  var answers = {
-    confirmSpecialChar: confirmSpecialChar,
-  };
-
+//funtion to create a random number and that is how many it will grab from each array with a max of password length
 };
+//created variable to create a running list of characters that will be in password
+var runningList = [];
+
 
 passwordOptions();
 // Get references to the #generate element
