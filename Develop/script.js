@@ -144,7 +144,10 @@ var passwordOptions = function () {
         alert("Your password has to contain something! Please select OK on at least one of the options.");
         return;
     };
-  
+  var passObj = {
+    confirmSpecialChar: confirmSpecialChar,
+  };
+  console.log(passObj);
 };
 
 passwordOptions();
