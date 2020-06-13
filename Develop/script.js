@@ -134,20 +134,10 @@ var passwordOptions = function () {
     var confirmNum = confirm (
       "Would you like your password to have numbers?"
     );
-    //Return if all options are selected no
-    if (
-      confirmSpecialChar === false &&
-      confirmLowerCase === false &&
-      confirmUpperCase === false &&
-      confirmNum === false
-    ) {
-        alert("Your password has to contain something! Please select OK on at least one of the options.");
-        return;
-    };
-  var passObj = {
+  var answers = {
     confirmSpecialChar: confirmSpecialChar,
   };
-  console.log(passObj);
+
 };
 
 passwordOptions();
