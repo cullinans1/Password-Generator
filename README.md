@@ -14,11 +14,11 @@ The program will then randomize whichever user selected and create a new randoml
 
 ## Website for the application: 
 
-
+https://cullinans1.github.io/Password-Generator/
 
 ## Screenshots of the application: 
 
-![screenshot] (/screenshot.png)
+![screenshot] (develop/screenshot.png)
 
 
 
