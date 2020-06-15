@@ -2,7 +2,6 @@
 
 //Array of special characters 
 var specialCharacters = [
-  " ",
   "!",
   "'",
   '"',
@@ -146,44 +145,45 @@ var passwordOptions = function () {
 return passwordInput;
 }
 
+//creating a function to randomize selected array
+function createRandom(array) {
+  var randomChar = Math.floor(Math.random() * array.length);
+  var randomFinal = array[randomChar];
+
+  return randomFinal;
+}
+
+
 //function to create password
 function generatePassword() {
   //function to pull what the user input
   var userOptions = passwordOptions();
   
-  //variable to store password
+  //array to store password
   var passwordFinal = [];
   
-  //variable to store random values 
+  //array to store random values 
   var rndmValues = [];
 
-  //pull random characters from each array if its true
+  //pull random characters from each array if its true and put it into rndmValue array after pushing it through the random function
   if(userOptions.confirmSpecialChar) {
-    function randomSpC() {
-      return specialCharacters[Math.floor(Math.random() * specialCharacters.length)];
-    };
-    console.log(randomSpC());
+    rndmValues = rndmValues.concat(specialCharacters);
   }
   if(userOptions.confirmLowerCase) {
-    function randomLower() {
-      return lowerCaseLetters[Math.floor(Math.random() * lowerCaseLetters.length)];
-    };
-    console.log(randomLower());
+    rndmValues = rndmValues.concat(lowerCaseLetters);
   }
   if(userOptions.confirmUpperCase) {
-    function randomUpper() {
-      return upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)];
-    };
-    console.log(randomUpper());
+    rndmValues = rndmValues.concat(upperCaseLetters);
   }
   if(userOptions.confirmNum) {
-    function randomNum() {
-      return numbers[Math.floor(Math.random() * numbers.length)];
-    };
-    console.log(randomNum());
+    rndmValues = rndmValues.concat(numbers);
   }
+  for( i= 0; i < userOptions.passLength; i ++) {
+    passwordFinal[i] = createRandom(rndmValues);
+  }
+  console.log(passwordFinal);
+  return passwordFinal.join("");
 }
-generatePassword();
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
