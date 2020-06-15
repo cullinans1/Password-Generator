@@ -18,7 +18,7 @@ https://cullinans1.github.io/Password-Generator/
 
 ## Screenshots of the application: 
 
-![screenshot] (develop/screenshot.png)
+![] (/images/screenshot.png)
 
 
 
