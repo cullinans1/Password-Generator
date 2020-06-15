@@ -1,4 +1,4 @@
-//alert("Press Generate Password to create a new password!");
+alert("Press Generate Password to create a new password!");
 
 //Array of special characters 
 var specialCharacters = [
