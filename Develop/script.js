@@ -153,7 +153,6 @@ function createRandom(array) {
   return randomFinal;
 }
 
-
 //function to create password
 function generatePassword() {
   //function to pull what the user input
